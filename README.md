@@ -38,7 +38,7 @@ After completing this Code Pattern, you will understand how to :
 
 ## Video
 
-[Click Here](https://ibm.ent.box.com/file/959387289161)
+[![](http://img.youtube.com/vi/1PEh5TLr7m0/0.jpg)](https://youtu.be/1PEh5TLr7m0)
 
 ## Included components
 
