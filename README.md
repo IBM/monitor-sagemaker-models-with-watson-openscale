@@ -1,10 +1,8 @@
 # Monitor SageMaker Models using Watson Open Scale on Cloud Pak for Data hosted on AWS 
 
-# IBM AWS Immersion Day Lab 1
+In this Code Pattern, we will demonstrate how to build predictive models in SageMaker and port the notebooks into IBM Cloud Pak for Data. We will run the SageMaker notebooks in Watson Studio canvas and generate predictions. 
 
-In this immersion day lab, we will demonstrate how to build predictive models in SageMaker and port the notebooks into IBM Cloud Pak for Data. We will run the SageMaker notebooks in Watson Studio canvas and generate predictions. 
-
-After completing this lab, you will understand how to :
+After completing this Code Pattern, you will understand how to :
 
 * Pre-process & analysis of data
 * Merge data to create consolidated files
