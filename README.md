@@ -194,9 +194,9 @@ Navigate to the [](https://github.com/IBM/pandemic-management-system-on-AWS/blob
 
 `Monitor SageMaker endpoints using Watson Open Scale for Fairness, Quality & Drift detection`
 
-This step requires IBM Cloud API Key. You can generate one [here](https://www.ibm.com/docs/en/app-connect/containers_cd?topic=servers-creating-cloud-api-key)
+This step requires IBM Cloud API Key. You can generate one by referring to this [link.](https://www.ibm.com/docs/en/app-connect/containers_cd?topic=servers-creating-cloud-api-key)
 
-This step requires Cloud Object Storage credentials. You can generate one [here](https://www.ibm.com/docs/en/app-connect/containers_cd?topic=type-cloud-object-storage-s3-account-details)
+This step requires Cloud Object Storage credentials. You can generate one by referring to this [link.](https://www.ibm.com/docs/en/app-connect/containers_cd?topic=type-cloud-object-storage-s3-account-details)
 
 Navigate to the [link](https://aiopenscale.cloud.ibm.com/aiopenscale/insights/357fc90a-5d8f-4a51-8fb5-734aa84b2b86/) to view the different metrics like Fairness, Quality, Drift etc on the SageMaker endpoint. The Fairness & Quality monitoring has been setup using the Watson Studio notebook from step 7. 
 
