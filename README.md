@@ -34,7 +34,8 @@ After completing this Code Pattern, you will understand how to :
 * Install Cloud Pak for Data on RedHat OpenShift cluster on AWS
 * Create an account with [AWS](https://aws.amazon.com/resources/create-account/)
 * Create an account with [SageMaker](https://aws.amazon.com/pm/sagemaker/)
-* Create a Notebook instance [SageMaker Notebook](https://docs.aws.amazon.com/sagemaker/latest/dg/howitworks-create-ws.html)
+* Create a Notebook instance using [SageMaker Notebook](https://docs.aws.amazon.com/sagemaker/latest/dg/howitworks-create-ws.html)
+* Clone this [repository](https://github.com/IBM/monitor-sagemaker-models-with-watson-openscale) or `Download the repo as Zip` into your local system to access all the files. 
 
 ## Video
 
@@ -138,15 +139,15 @@ Define the project by giving a Name and hit 'Create'.
 
 `Data Pre-processing` 
 
-Navigate to the [notebooks](https://github.com/IBM/pandemic-management-system-on-AWS/blob/main/notebooks) section and download the notebook 'Data-pre-processing.ipynb' into your local file system. This notebook built in SageMaker takes care of all the pre-processing activities like data analysis, merging data, missing values, feature engineering, usecases formation & more. The updated csv files are uploaded onto S3 bucket programmatically. Upload the notebook into Cloud Pak for Data environment using Watson Studio in the next step.
+Navigate to the [notebooks](https://github.com/IBM/pandemic-management-system-on-AWS/blob/main/notebooks) section and download the notebook `Data-pre-processing.ipynb` into your local file system. This notebook built in SageMaker takes care of all the pre-processing activities like data analysis, merging data, missing values, feature engineering, usecases formation & more. The updated csv files are uploaded onto S3 bucket programmatically. Upload the notebook into Cloud Pak for Data environment using Watson Studio in the next step.
 
 `Time-Series Forecasting Models`
 
-Navigate to the [notebooks](https://github.com/IBM/pandemic-management-system-on-AWS/blob/main/notebooks) section and download the notebooks 'WS-Flanders-Predict.ipynb' & 'WS-Belgium-Predict.ipynb' into your local file system. These notebooks built in SageMaker using Deep Neural networks takes care of building time-series forecasting models at the Region & Country levels. Upload the notebooks into Cloud Pak for Data environment using Watson Studio in the next step.
+Navigate to the [notebooks](https://github.com/IBM/pandemic-management-system-on-AWS/blob/main/notebooks) section and download the notebooks `WS-Flanders-Predict.ipynb` & `WS-Belgium-Predict.ipynb` into your local file system. These notebooks built in SageMaker using Deep Neural networks takes care of building time-series forecasting models at the Region & Country levels. Upload the notebooks into Cloud Pak for Data environment using Watson Studio in the next step.
 
 `Risk Index Prediction`
 
-Navigate to the [notebooks](https://github.com/IBM/pandemic-management-system-on-AWS/blob/main/notebooks) section and download the notebook 'Risk_Index_Prediction.ipynb' into your local file system. This notebook built using SageMaker Linear Learner (in-built module) takes care of building multi-class classification ML model for prediction risk index per region. Upload the notebook into Cloud Pak for Data environment using Watson Studio in the next step.
+Navigate to the [notebooks](https://github.com/IBM/pandemic-management-system-on-AWS/blob/main/notebooks) section and download the notebook `Risk_Index_Prediction.ipynb` into your local file system. This notebook built using SageMaker Linear Learner (in-built module) takes care of building multi-class classification ML model for prediction risk index per region. Upload the notebook into Cloud Pak for Data environment using Watson Studio in the next step.
 
 ## 5. Upload the SageMaker notebooks into Watson Studio project
 
@@ -178,23 +179,23 @@ Create new runtime environment.
 
 `Deploy SageMaker model from Watson Studio & create endpoints`
 
-Navigate to the [sagemaker-model-deploy](https://github.com/IBM/pandemic-management-system-on-AWS/blob/main/sagemaker-model-deploy/RI-SageMaker-Deploy-Wstudio.ipynb) section and download the notebook 'RI-SageMaker-Deploy-Wstudio.ipynb' into your local file system. This notebook built in Watson Studio uses SageMaker inbuilt modules (Linear Learner) to create a multiclass classifier model for prediction risk index per region. The Watson Studio notebook deploys the model in SageMaker platform and creates two endpoints with different methodologies for real-time scoring. Upload the notebooks into Cloud Pak for Data environment using Watson Studio as shown in previous step.
+Navigate to the [sagemaker-model-deploy](https://github.com/IBM/pandemic-management-system-on-AWS/blob/main/sagemaker-model-deploy/RI-SageMaker-Deploy-Wstudio.ipynb) section and download the notebook `RI-SageMaker-Deploy-Wstudio.ipynb` into your local file system. This notebook built in Watson Studio uses SageMaker inbuilt modules (Linear Learner) to create a multiclass classifier model for prediction risk index per region. The Watson Studio notebook deploys the model in SageMaker platform and creates two endpoints with different methodologies for real-time scoring. Upload the notebooks into Cloud Pak for Data environment using Watson Studio as shown in previous step.
 
 ## 7. Setup Watson Open Scale for monitoring SageMaker endpoints
 
 `Setup the monitoring of SageMaker endpoint on Watson Open Scale`
 
-Navigate to the [open-scale-model-monitor](https://github.com/IBM/pandemic-management-system-on-AWS/blob/main/open-scale-model-monitor/SageMaker-Monitor-OpenScale.ipynb) section and download the notebook 'SageMaker-Monitor-OpenScale.ipynb' into your local file system. This notebook built in Watson Studio uses Watson Open Scale for setup & monitor SageMaker endpoints. The metrics which will be evaluated are Fairness, Quality & Drift detection of SageMaker endpoints as per the thresholds set by the user. This will help to identify whether the SageMaker model requires retraining & eliminate bias in the scoring of the data to generate predictions. 
+Navigate to the [open-scale-model-monitor](https://github.com/IBM/pandemic-management-system-on-AWS/blob/main/open-scale-model-monitor/SageMaker-Monitor-OpenScale.ipynb) section and download the notebook `SageMaker-Monitor-OpenScale.ipynb` into your local file system. This notebook built in Watson Studio uses Watson Open Scale for setup & monitor SageMaker endpoints. The metrics which will be evaluated are Fairness, Quality & Drift detection of SageMaker endpoints as per the thresholds set by the user. This will help to identify whether the SageMaker model requires retraining & eliminate bias in the scoring of the data to generate predictions. 
 
 `Upload Drift detection model file into Watson Open Scale canvas`
 
-Navigate to the [drift-model](https://github.com/IBM/monitor-sagemaker-models-with-watson-openscale/blob/main/drift-model/Drift-Detection-Model.ipynb) folder and download the file 'Drift-Detection-Model.ipynb' into your local file system. You need to update the credentials in Cell number 18 and the name of the SageMaker endpoint in cell number 19 and then run the notebook. 
+Navigate to the [drift-model](https://github.com/IBM/monitor-sagemaker-models-with-watson-openscale/blob/main/drift-model/Drift-Detection-Model.ipynb) folder and download the file `Drift-Detection-Model.ipynb` into your local file system. You need to update the credentials in Cell number 18 and the name of the SageMaker endpoint in cell number 19 and then run the notebook. 
 
 ![](https://github.com/IBM/monitor-sagemaker-models-with-watson-openscale/blob/main/images/cred-endpoint.png)
 
 ![](https://github.com/IBM/monitor-sagemaker-models-with-watson-openscale/blob/main/images/endpoint-name.png)
 
-Click on 'Download Drift detection model' option at the end of the notebook and download the tar.gz file into your local file system. This needs to be uploaded into Watson Open Scale canvas as shown in the next step. The model has been built and trained on the Risk Index data to learn and highlight when there's a change in model performance.  
+Click on `Download Drift detection model` option at the end of the notebook and download the tar.gz file into your local file system. This needs to be uploaded into Watson Open Scale canvas as shown in the next step. The model has been built and trained on the Risk Index data to learn and highlight when there's a change in model performance.  
 
 ## 8. Monitor SageMaker endpoints using Watson Open Scale
 
@@ -237,5 +238,3 @@ In this code pattern, we have learnt how to extract data from different sources,
 This code pattern is licensed under the Apache License, Version 2. Separate third-party code objects invoked within this code pattern are licensed by their respective providers pursuant to their own separate licenses. Contributions are subject to the [Developer Certificate of Origin, Version 1.1](https://developercertificate.org/) and the [Apache License, Version 2](https://www.apache.org/licenses/LICENSE-2.0.txt).
 
 [Apache License FAQ](https://www.apache.org/foundation/license-faq.html#WhatDoesItMEAN)
-
-
