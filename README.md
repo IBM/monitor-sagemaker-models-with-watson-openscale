@@ -183,6 +183,10 @@ Navigate to the [sagemaker-model-deploy](https://github.com/IBM/pandemic-managem
 
 ## 7. Setup Watson Open Scale for monitoring SageMaker endpoints
 
+This step requires IBM Cloud API Key. You can generate one by referring to this [link.](https://www.ibm.com/docs/en/app-connect/containers_cd?topic=servers-creating-cloud-api-key)
+
+This step requires Cloud Object Storage credentials. You can generate one by referring to this [link.](https://www.ibm.com/docs/en/app-connect/containers_cd?topic=type-cloud-object-storage-s3-account-details)
+
 `Setup the monitoring of SageMaker endpoint on Watson Open Scale`
 
 Navigate to the [open-scale-model-monitor](https://github.com/IBM/pandemic-management-system-on-AWS/blob/main/open-scale-model-monitor/SageMaker-Monitor-OpenScale.ipynb) section and download the notebook `SageMaker-Monitor-OpenScale.ipynb` into your local file system. This notebook built in Watson Studio uses Watson Open Scale for setup & monitor SageMaker endpoints. The metrics which will be evaluated are Fairness, Quality & Drift detection of SageMaker endpoints as per the thresholds set by the user. This will help to identify whether the SageMaker model requires retraining & eliminate bias in the scoring of the data to generate predictions. 
@@ -200,10 +204,6 @@ Click on `Download Drift detection model` option at the end of the notebook and 
 ## 8. Monitor SageMaker endpoints using Watson Open Scale
 
 `Monitor SageMaker endpoints using Watson Open Scale for Fairness, Quality & Drift detection`
-
-This step requires IBM Cloud API Key. You can generate one by referring to this [link.](https://www.ibm.com/docs/en/app-connect/containers_cd?topic=servers-creating-cloud-api-key)
-
-This step requires Cloud Object Storage credentials. You can generate one by referring to this [link.](https://www.ibm.com/docs/en/app-connect/containers_cd?topic=type-cloud-object-storage-s3-account-details)
 
 Navigate to the [Watson OpenScale Dashboard](https://aiopenscale.cloud.ibm.com/aiopenscale/insights/357fc90a-5d8f-4a51-8fb5-734aa84b2b86/) to view the different metrics like Fairness, Quality, Drift etc on the SageMaker endpoint. The Fairness & Quality monitoring has been setup using the Watson Studio notebook from step 7. 
 
