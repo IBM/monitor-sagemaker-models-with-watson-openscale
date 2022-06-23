@@ -188,7 +188,13 @@ Navigate to the [open-scale-model-monitor](https://github.com/IBM/pandemic-manag
 
 `Upload Drift detection model file into Watson Open Scale canvas`
 
-Navigate to the [](https://github.com/IBM/pandemic-management-system-on-AWS/blob/main/drift-model/Risk-Index-Drift_detection_model.tar.gz) section and download the file 'Risk-Index-Drift_detection_model.tar.gz' into your local file system. The model has been built and trained on the Risk Index data to learn and highlight when there's a change in model performance. This needs to be uploaded into Watson Open Scale canvas as shown in the previous steps. 
+Navigate to the [drift-model](https://github.com/IBM/monitor-sagemaker-models-with-watson-openscale/blob/main/drift-model/Drift-Detection-Model.ipynb) folder and download the file 'Drift-Detection-Model.ipynb' into your local file system. You need to update the credentials in Cell number 18 and the name of the SageMaker endpoint in cell number 19 and then run the notebook. 
+
+![](https://github.com/IBM/monitor-sagemaker-models-with-watson-openscale/blob/main/images/cred-endpoint.png)
+
+![](https://github.com/IBM/monitor-sagemaker-models-with-watson-openscale/blob/main/images/endpoint-name.png)
+
+Click on 'Download Drift detection model' option at the end of the notebook and download the tar.gz file into your local file system. This needs to be uploaded into Watson Open Scale canvas as shown in the next step. The model has been built and trained on the Risk Index data to learn and highlight when there's a change in model performance.  
 
 ## 8. Monitor SageMaker endpoints using Watson Open Scale
 
@@ -208,7 +214,7 @@ Click on `Actions` and choose `Configure monitors`.
 
 ![](https://github.com/IBM/pandemic-management-system-on-AWS/blob/main/images/conf-mon.png)
 
-click on `Drift` under Evaluations tab and upload the Drift model tar.gz file (which was downloaded in previous step) by clicking on the pencil icon next to Drift model - click next and upload the file. You can also set `Drift thresholds` & `Sample size` as per your requirement.
+click on `Drift` under Evaluations tab and upload the Drift model tar.gz file (which was downloaded in previous step) by clicking on the pencil icon next to Drift model - click next and upload the file (tar.gz) created in step number 7. You can also set `Drift thresholds` & `Sample size` as per your requirement.
 
 ![](https://github.com/IBM/pandemic-management-system-on-AWS/blob/main/images/upload-dd-model.png)
 
