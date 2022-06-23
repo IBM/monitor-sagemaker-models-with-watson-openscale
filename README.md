@@ -229,7 +229,7 @@ Click on the option below to configure the metrics.
 
 Set up the parameters for `Fairness` per below.
 
-![](https://github.com/IBM/monitor-sagemaker-models-with-watson-openscale/blob/main/images/fairness.png)
+![](https://github.com/IBM/monitor-sagemaker-models-with-watson-openscale/blob/main/images/fairness-threshold.png)
 
 Set up the parameters for `Quality` per below.
 
@@ -239,7 +239,7 @@ You can view the Watson Open Scale monitor which has metrics like `Fairness, Qua
 
 ![](https://github.com/IBM/pandemic-management-system-on-AWS/blob/main/images/wos.png)
 
-We are all set to monitor SageMaker endpoints on Watson Open Scale for Fairness, Quality & Drift metrics. Explainability is not set up because the feature works for binary classification where as Risk Index prediction is multi-class classification use-case.
+We are all set to monitor SageMaker endpoints on Watson Open Scale for Fairness, Quality & Drift metrics. We can observe that Fairness metric is showing `Green` because the threshold is set for 80% and the score is 100%. The threshold for `Area under ROC` metric is 0.8 (80%) and the score is 0.83 (83%) which is why the Quality metric is showing `Green`. Explainability is not set up because the feature works for binary classification where as Risk Index prediction is multi-class classification use-case.
 
 ## Summary
 
