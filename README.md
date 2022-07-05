@@ -180,7 +180,7 @@ Create new runtime environment.
 
 `Deploy SageMaker model from Watson Studio & create endpoints`
 
-Navigate to the [sagemaker-model-deploy](https://github.com/IBM/pandemic-management-system-on-AWS/blob/main/sagemaker-model-deploy/RI-SageMaker-Deploy-Wstudio.ipynb) section and download the notebook `RI-SageMaker-Deploy-Wstudio.ipynb` into your local file system. This notebook built in Watson Studio uses SageMaker inbuilt modules (Linear Learner) to create a multiclass classifier model for prediction risk index per region. The Watson Studio notebook deploys the model in SageMaker platform and creates two endpoints with different methodologies for real-time scoring. Upload the notebooks into Cloud Pak for Data environment using Watson Studio as shown in previous step.
+Navigate to the [sagemaker-model-deploy](https://github.com/IBM/pandemic-management-system-on-AWS/blob/main/sagemaker-model-deploy/RI-SageMaker-Deploy-Wstudio.ipynb) section and download the notebook `RI-SageMaker-Deploy-Wstudio.ipynb` into your local file system. You can upload the notebook into Watson studio as shown in step #5. This notebook built in Watson Studio uses SageMaker inbuilt modules (Linear Learner) to create a multiclass classifier model for prediction risk index per region. The Watson Studio notebook deploys the model in SageMaker platform and creates two endpoints with different methodologies for real-time scoring. Upload the notebooks into Cloud Pak for Data environment using Watson Studio as shown in previous step.
 
 ## 7. Setup Watson Open Scale for monitoring SageMaker endpoints
 
@@ -190,11 +190,11 @@ This step requires Cloud Object Storage credentials. You can generate one by ref
 
 `Setup the monitoring of SageMaker endpoint on Watson Open Scale`
 
-Navigate to the [open-scale-model-monitor](https://github.com/IBM/pandemic-management-system-on-AWS/blob/main/open-scale-model-monitor/SageMaker-Monitor-OpenScale.ipynb) section and download the notebook `SageMaker-Monitor-OpenScale.ipynb` into your local file system. This notebook built in Watson Studio uses Watson Open Scale for setup & monitor SageMaker endpoints. The metrics which will be evaluated are Fairness, Quality & Drift detection of SageMaker endpoints as per the thresholds set by the user. This will help to identify whether the SageMaker model requires retraining & eliminate bias in the scoring of the data to generate predictions. 
+Navigate to the [open-scale-model-monitor](https://github.com/IBM/pandemic-management-system-on-AWS/blob/main/open-scale-model-monitor/SageMaker-Monitor-OpenScale.ipynb) section and download the notebook `SageMaker-Monitor-OpenScale.ipynb` into your local file system. You can upload the notebook into Watson studio as shown in step #5. This notebook built in Watson Studio uses Watson Open Scale for setup & monitor SageMaker endpoints. The metrics which will be evaluated are Fairness, Quality & Drift detection of SageMaker endpoints as per the thresholds set by the user. This will help to identify whether the SageMaker model requires retraining & eliminate bias in the scoring of the data to generate predictions. 
 
 `Upload Drift detection model file into Watson Open Scale canvas`
 
-Navigate to the [drift-model](https://github.com/IBM/monitor-sagemaker-models-with-watson-openscale/blob/main/drift-model/Drift-Detection-Model.ipynb) folder and download the file `Drift-Detection-Model.ipynb` into your local file system. You need to update the credentials in Cell number 18 and the name of the SageMaker endpoint in cell number 19 and then run the notebook. 
+Navigate to the [drift-model](https://github.com/IBM/monitor-sagemaker-models-with-watson-openscale/blob/main/drift-model/Drift-Detection-Model.ipynb) folder and download the file `Drift-Detection-Model.ipynb` into your local file system. You can upload the notebook into Watson studio as shown in step #5. You need to update the credentials in Cell number 18 and the name of the SageMaker endpoint in cell number 19 and then run the notebook. 
 
 ![](https://github.com/IBM/monitor-sagemaker-models-with-watson-openscale/blob/main/images/cred-endpoint.png)
 
