@@ -35,6 +35,7 @@ After completing this Code Pattern, you will understand how to :
 * Create an account with [AWS](https://aws.amazon.com/resources/create-account/)
 * Create an account with [SageMaker](https://aws.amazon.com/pm/sagemaker/)
 * Create a Notebook instance using [SageMaker Notebook](https://docs.aws.amazon.com/sagemaker/latest/dg/howitworks-create-ws.html)
+* Create an account with [IBM Cloud](https://cloud.ibm.com/login)
 * Create a Watson OpenScale instance using [IBM Cloud](https://cloud.ibm.com/login) and select internal database using manual setup option
 * Clone this [repository](https://github.com/IBM/monitor-sagemaker-models-with-watson-openscale) or `Download the repo as Zip` into your local system to access all the files. 
 
