@@ -82,7 +82,7 @@ Create an S3 bucket in AWS by refering to the AWS documentation.
 * [Click here to create a bucket](https://docs.aws.amazon.com/AmazonS3/latest/userguide/create-bucket-overview.html)
 * Click on Create Bucket and enter a name for the bucket. (for example, 'Datasets')
 * Enable the option `Block all public access` and then click on `Create bucket` button.
-* Select the files `COVID19BE_CASES_AGESEX.csv` and `COVID19BE_HOSP.csv` from the [data]('/monitor-sagemaker-models-with-watson-openscale/tree/main/data') folder and upload them into S3 bucket. 
+* Select the files `COVID19BE_CASES_AGESEX.csv` and `COVID19BE_HOSP.csv` from the [data](/monitor-sagemaker-models-with-watson-openscale/tree/main/data) folder and upload them into S3 bucket. 
 
 ## 2. Build multiple notebooks in SageMaker
 
