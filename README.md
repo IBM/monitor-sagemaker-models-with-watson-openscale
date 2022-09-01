@@ -156,29 +156,33 @@ Navigate to the [notebooks](https://github.com/IBM/pandemic-management-system-on
 
 ## 5. Upload the SageMaker notebooks into Watson Studio project
 
-Log in to the project in Cloud Pak for Data and click on `Add to project`. 
+Log in to the project in Cloud Pak for Data and click on `Assets` 
 
-![](https://github.com/IBM/pandemic-management-system-on-AWS/blob/main/images/add-to-prj.png)
+![](/images/assets.png)
 
-Click on `Notebook`
+Click on `New asset`
 
-![](https://github.com/IBM/pandemic-management-system-on-AWS/blob/main/images/sel-nb.png)
+![](/images/new-assets.png)
 
-Select `From file` option - choose the runtime as 8vCPU & 32GB RAM - click on `Upload` and select the notebook from your local file system to complete uploading the notebook.
+Click on `Code editors`
 
-![](https://github.com/IBM/pandemic-management-system-on-AWS/blob/main/images/from-file.png)
+![](/images/code-editor.png)
 
-`Note: If you do not see the runtime as 8vCPU & 32GB RAM in the drop down, then you will have to add the runtime under Environments tab in the project.` 
+Click on `Jupyter notebook editor`
 
-Click on `Environments`. 
+![](/images/nb-editor.png)
 
-![](https://github.com/IBM/pandemic-management-system-on-AWS/blob/main/images/env.png)
+Select `From file` option - choose the default runtime (1vCPU & 2GB RAM) to run the notebook. 
 
-Create new runtime environment.
+![](/images/from-file.png)
 
-![](https://github.com/IBM/pandemic-management-system-on-AWS/blob/main/images/new-env.png)
+Click on `Kernel` and choose `Restart & Run All` option.
 
-**`Repeat the above steps for uploading all the notebooks in this repository.`**
+![](/images/run-nb.png)
+
+**`Repeat the above steps for uploading all the notebooks in this repository.`** This is how we can build models in AWS SageMaker and port them into Cloud Pak for Data and run them in Watson Studio.
+
+**Note:- The home directory has to be changed in the SageMaker Notebooks after uploading them into Watson Studio. `Save the model to home directory` cell will need home directory replaced to `/home/wsuser/work` in cell numbers 37 to 41 for `WS-Flanders-Predict.ipynb` notebook and cell numbers 36 to 40 for `WS-Belgium-Predict.ipynb` notebook.**
 
 ## 6. Run the notebooks in Watson Studio to generate predictions and endpoints
 
