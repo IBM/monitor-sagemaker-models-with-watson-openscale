@@ -100,6 +100,8 @@ After the instance is created, click on open Jupyter. You can also open JupyterL
 
 Click on `Upload` on the top right side to upload notebooks. Navigate to the [notebooks](https://github.com/IBM/pandemic-management-system-on-AWS/blob/main/notebooks) section and download all the notebooks into your local file system. You can upload the notebooks in one go and run them in SageMaker. 
 
+**Select the Kernel as conda_python3 when prompted and choose Set Kernel option.**
+
 When a notebook is executed, what is actually happening is that each code cell in
 the notebook is executed, in order, from top to bottom.
 
@@ -188,7 +190,9 @@ Click on `Kernel` and choose `Restart & Run All` option.
 
 `Deploy SageMaker model from Watson Studio & create endpoints`
 
-Navigate to the [sagemaker-model-deploy](https://github.com/IBM/pandemic-management-system-on-AWS/blob/main/sagemaker-model-deploy/RI-SageMaker-Deploy-Wstudio.ipynb) section and download the notebook `RI-SageMaker-Deploy-Wstudio.ipynb` into your local file system. You can upload the notebook into Watson studio as shown in step #5. This notebook built in Watson Studio uses SageMaker inbuilt modules (Linear Learner) to create a multiclass classifier model for prediction risk index per region. The Watson Studio notebook deploys the model in SageMaker platform and creates two endpoints with different methodologies for real-time scoring. Upload the notebooks into Cloud Pak for Data environment using Watson Studio as shown in previous step.
+Navigate to the [sagemaker-model-deploy](https://github.com/IBM/pandemic-management-system-on-AWS/blob/main/sagemaker-model-deploy/RI-SageMaker-Deploy-Wstudio.ipynb) section and download the notebook `RI-SageMaker-Deploy-Wstudio.ipynb` into your local file system. 
+
+This notebook built in Watson Studio uses SageMaker inbuilt modules (Linear Learner) to create a multi-class classifier model for prediction risk index per region. The Watson Studio notebook deploys the model in SageMaker platform and creates two endpoints with different methodologies for real-time scoring. You can choose the first or the second endpoint for monitoring using Watson OpenScale. Upload the notebooks into Cloud Pak for Data environment using Watson Studio as shown in previous step.
 
 ## 7. Setup Watson Open Scale for monitoring SageMaker endpoints
 
@@ -222,13 +226,15 @@ Navigate to the [drift-model](https://github.com/IBM/monitor-sagemaker-models-wi
 
 ![](https://github.com/IBM/monitor-sagemaker-models-with-watson-openscale/blob/main/images/endpoint-name.png)
 
-Click on `Download Drift detection model` option at the end of the notebook and download the tar.gz file into your local file system. A sample tar.gz file is available [here](https://github.com/IBM/monitor-sagemaker-models-with-watson-openscale/blob/main/drift-model/Risk-Index-Drift_detection_model.tar.gz).This needs to be uploaded into Watson Open Scale canvas as shown in the next step. The model has been built and trained on the Risk Index data to learn and highlight when there's a change in model performance.  
+Run all the cells in the notebook (`by clicking on Kernel - choose Restart & Run All`) & click on `Download Drift detection model` option at the end of the notebook and download the tar.gz file into your local file system. A sample tar.gz file is available [here](https://github.com/IBM/monitor-sagemaker-models-with-watson-openscale/blob/main/drift-model/Risk-Index-Drift_detection_model.tar.gz).This needs to be uploaded into Watson Open Scale canvas as shown in the next step. The model has been built and trained on the Risk Index data to learn and highlight when there's a change in model performance.  
 
 ## 8. Monitor SageMaker endpoints using Watson Open Scale
 
 `Monitor SageMaker endpoints using Watson Open Scale for Fairness, Quality & Drift detection`
 
-Navigate to the [Watson OpenScale Dashboard](https://aiopenscale.cloud.ibm.com/aiopenscale/insights/357fc90a-5d8f-4a51-8fb5-734aa84b2b86/) to view the different metrics like Fairness, Quality, Drift etc on the SageMaker endpoint. The Fairness & Quality monitoring has been setup using the Watson Studio notebook from step 7. 
+**Please make sure you have created an instance of Watson OpenScale from IBM Cloud catalog and select internal database using manual setup option. You might be asked to sign in to access Watson OpenScale Dashboard.**
+
+Navigate to the [Watson OpenScale Dashboard](https://aiopenscale.cloud.ibm.com/aiopenscale/insights/) to view the different metrics like Fairness, Quality, Drift etc on the SageMaker endpoint. The Fairness & Quality monitoring has been setup using the Watson Studio notebook from step 7. 
 
 Click on Linear Learner SageMaker model in Open Scale canvas which was imported into Watson Open Scale programmatically using the notebooks from steps 6 & 7.
 
@@ -262,7 +268,7 @@ You can view the Watson Open Scale monitor which has metrics like `Fairness, Qua
 
 ![](https://github.com/IBM/pandemic-management-system-on-AWS/blob/main/images/wos.png)
 
-We are all set to monitor SageMaker endpoints on Watson Open Scale for Fairness, Quality & Drift metrics. We can observe that Fairness metric is showing `Green` because the threshold is set for 80% and the score is 100%. The threshold for `Area under ROC` metric is 0.8 (80%) and the score is 0.83 (83%) which is why the Quality metric is showing `Green`. Explainability is not set up because the feature works for binary classification where as Risk Index prediction is multi-class classification use-case.
+We are all set to monitor SageMaker endpoints on Watson Open Scale for Fairness, Quality & Drift metrics. We can observe that Fairness metric is showing `Green` because the threshold is set for 80% and the score is 100%. The threshold for `Area under ROC` metric is 0.8 (80%) and the score is 0.83 (83%) which is why the Quality metric is showing `Green`. Explainability is not set up because the feature works for binary classification where as Risk Index prediction is multi-class classification use-case. Drift metrics has been setup and will be triggered when the endpoint generates predictions on new data. 
 
 ## Summary
 
