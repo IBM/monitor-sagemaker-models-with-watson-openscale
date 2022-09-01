@@ -194,7 +194,21 @@ Navigate to the [sagemaker-model-deploy](https://github.com/IBM/pandemic-managem
 
 This step requires IBM Cloud API Key. You can generate one by referring to this [link.](https://www.ibm.com/docs/en/app-connect/containers_cd?topic=servers-creating-cloud-api-key)
 
-This step requires Cloud Object Storage credentials. You can generate one by referring to this [link.](https://www.ibm.com/docs/en/app-connect/containers_cd?topic=type-cloud-object-storage-s3-account-details)
+This step requires Cloud Object Storage credentials. You can generate one by referring to this [link.](https://cloud.ibm.com/login) and follow the below steps.
+
+![](/images/sel-cos.png)
+
+Follow the steps to create a Cloud Object Storage instance `Lite` plan and then create bucket per below.
+
+![](/images/crt-bkt.png)
+
+![](/images/crt-cred.png)
+
+![](/images/new-cred.png)
+
+![](/images/copy-cred.png)
+
+We should copy the bucket name, API key and service id crn to be updated in the `SageMaker-Monitor-OpenScale` notebook.
 
 `Setup the monitoring of SageMaker endpoint on Watson Open Scale`
 
