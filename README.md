@@ -126,17 +126,19 @@ If you want to download the notebooks, select the notebook - click on File - Dow
   
 ## 3. Create projects in Watson Studio
 
-Sign in to IBM Cloud Pak for Data console
+Sign in to IBM Cloud Pak for Data console and then Click on the Navigation Menu and expend Projects and click All Projects. Then click on ‘New Project +’ to create new project by following below steps shown in images
 
-![](https://github.com/IBM/pandemic-management-system-on-AWS/blob/main/images/cpd-login.png)
+![](/images/project-1.png)
+
+![](/images/cpd-login.png)
 
 Click on New Project and select an empty project per below.
 
-![](https://github.com/IBM/pandemic-management-system-on-AWS/blob/main/images/crt-prj.png)
+![](/images/crt-prj.png)
 
 Define the project by giving a Name and hit 'Create'.
 
-![](https://github.com/IBM/pandemic-management-system-on-AWS/blob/main/images/def-prj.png)
+![](/images/def-prj.png)
 
 ## 4. Download the SageMaker notebooks and import them into IBM Watson Studio
 
