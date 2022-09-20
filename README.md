@@ -27,7 +27,6 @@ After completing this Code Pattern, you will understand how to :
 6. Download the SageMaker models and import them into Watson Studio
 7. Run the models in Watson Studio 
 8. Write the results back to S3 bucket
-9. Generate visualizations using embedded dashboard
 
 ## Pre-requisites
 
@@ -272,7 +271,7 @@ We are all set to monitor SageMaker endpoints on Watson Open Scale for Fairness,
 
 ## Summary
 
-In this code pattern, we have learnt how to extract data from different sources, pre-process the data, generate two use-cases, build models in SageMaker notebooks using SageMaker in-built modules & open sourced modules. We have also learnt how to port SageMaker notebooks into Watson Studio to generate SageMaker endpoints. We have configured Watson Open Scale to setup & monitor SageMaker endpoints for Fairness, Quality & Drift metrics. This is a good example of migration story from SageMaker to Cloud Pak for data and integration of different services using IBM & AWS to build end to end solution. 
+In this code pattern, we have learnt how to extract data from different sources, pre-process the data, generate two use-cases, build models in SageMaker notebooks using SageMaker in-built modules & open sourced modules. We have also learnt how to port SageMaker notebooks into Watson Studio to generate SageMaker endpoints. We have configured Watson Open Scale to setup & monitor SageMaker endpoints for Fairness, Quality & Drift metrics. This is a good example to demonstrate how to integrate different services using IBM and AWS to build an end-to-end solution. 
 
 ## License
 
