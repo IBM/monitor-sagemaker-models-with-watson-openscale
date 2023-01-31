@@ -229,11 +229,11 @@ Run all the cells in the notebook (`by clicking on Kernel - choose Restart & Run
 
 ## 8. Monitor SageMaker endpoints using Watson Open Scale
 
-`Monitor SageMaker endpoints using Watson Open Scale for Fairness, Quality & Drift detection`
+`Monitor SageMaker endpoints using Watson Open Scale for Fairness, Quality, Explainability & Drift detection`.
 
 **Please make sure you have created an instance of Watson OpenScale from IBM Cloud catalog and select internal database using manual setup option. You might be asked to sign in to access Watson OpenScale Dashboard.**
 
-Navigate to the [Watson OpenScale Dashboard](https://aiopenscale.cloud.ibm.com/aiopenscale/insights/) to view the different metrics like Fairness, Quality, Drift etc on the SageMaker endpoint. The Fairness & Quality monitoring has been setup using the Watson Studio notebook from step 7. 
+Navigate to the [Watson OpenScale Dashboard](https://aiopenscale.cloud.ibm.com/aiopenscale/insights/) to view the different metrics like Fairness, Quality, Explainability, Drift etc on the SageMaker endpoint. The Fairness, Quality monitoring & Explainability metrics have been setup using the Watson Studio notebook from step 7. 
 
 Click on Linear Learner SageMaker model in Open Scale canvas which was imported into Watson Open Scale programmatically using the notebooks from steps 6 & 7.
 
