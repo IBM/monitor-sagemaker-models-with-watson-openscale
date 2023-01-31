@@ -267,21 +267,23 @@ You can view the Watson Open Scale monitor which has metrics like `Fairness, Qua
 
 ![](https://github.com/IBM/pandemic-management-system-on-AWS/blob/main/images/wos.png)
 
+Explore the `Explainability` feature per below.
+
 Click on the second option in the left pane per below to view `Explainability` metric.
 
-![](/blob/main/images/explain-1.png)
+![](https://github.com/IBM/monitor-sagemaker-models-with-watson-openscale/blob/main/images/explain-1.png)
 
 Select the `Deployed model` from the dropdown and hit `Explain` on any transaction of your choice. In the below screenshot, first transaction is selected for Explainability.
 
-![](/blob/main/images/explain-2.png)
+![](https://github.com/IBM/monitor-sagemaker-models-with-watson-openscale/blob/main/images/explain-2.png)
 
 In this screen, under `Explain` tab, you will see the Feature Importance analyzed with `LIME` technique. We will understand the significant variable influencing the outcome.
 
-![](/blob/main/images/explain-3.png)
+![](https://github.com/IBM/monitor-sagemaker-models-with-watson-openscale/blob/main/images/explain-3.png)
 
 You can click on `Inspect` to change the values on real-time and analyze the new predictions. This will help to identify the feature importance for different set of input values.
 
-![](/blob/main/images/explain-4.png)
+![](https://github.com/IBM/monitor-sagemaker-models-with-watson-openscale/blob/main/images/explain-4.png)
 
 We are all set to monitor SageMaker endpoints on Watson Open Scale for Fairness, Quality & Drift metrics. We can observe that `Fairness` metric is showing `Green` because the threshold is set for 80% and the score is 100%. The threshold for `Area under ROC` metric is 0.8 (80%) and the score is 0.83 (83%) which is why the `Quality` metric is showing `Green`. `Explainability` metrics will identify the feature importance for the predicted outcomes which will be beneficial for analyzing the feature values influencing the outcome. `Drift` metrics has been setup and will be triggered when the endpoint generates predictions on new data. 
 
