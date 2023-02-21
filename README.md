@@ -40,7 +40,7 @@ After completing this Code Pattern, you will understand how to :
 
 ## Video
 
-[![](http://img.youtube.com/vi/1PEh5TLr7m0/0.jpg)](https://youtu.be/1PEh5TLr7m0)
+[![](http://img.youtube.com/vi/JGE8CQrj9BM/0.jpg)](https://youtu.be/JGE8CQrj9BM)
 
 ## Included components
 
